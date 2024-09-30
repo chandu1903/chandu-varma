@@ -1,0 +1,252 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.background-img {
+  background-image: url('background.png');
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  background-repeat: no-repeat;
+}
+
+/* Fixed navigation bar */
+.nav {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+
+.nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 15px;
+  height: 45px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: 50px;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #00843D;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px;
+  font-weight: 580;
+}
+
+.nav-links a:hover {
+  color: darkgreen;
+}
+
+/* Main Section */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.text {
+  max-width: 50%;
+}
+
+.text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1.5px solid;
+  letter-spacing: 2px;
+  margin-left: 50px;
+  width: 15ch;
+  animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
+  text-shadow: 1px 1px rgb(26, 161, 26);
+}
+
+.text p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  text-align: justify;
+  margin-left: 50px;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.buttons button {
+  padding: 10px 25px;
+  margin-left: 50px;
+  margin-right: 15px;
+  margin-top: 15px;
+  border-radius: 25px;
+  border: 2px solid green;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.project-btn {
+  background-color: #1f8e49;
+  color: #fff;
+}
+
+.project-btn:hover {
+  background-color: #fff;
+  color: #1f8e49;
+  border-color: #1f8e49;
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: #1f8e49;
+  border: 2px solid #1f8e49;
+}
+
+.contact-btn:hover {
+  background-color: #1f8e49;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .main {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .text {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .lab2 img {
+      width: 100%;
+      height: auto;
+  }
+  
+  .buttons {
+      justify-content: center;
+      margin: 20px 0;
+  }
+
+  .nav-bar {
+      flex-direction: column;
+  }
+
+  .nav-links {
+      flex-direction: column;
+  }
+
+  .nav-links li {
+      margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text h1 {
+      font-size: 40px;
+  }
+
+  .text p {
+      font-size: 1rem;
+  }
+
+  .buttons button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+  }
+
+  .about-me-image {
+      width: 250px;
+      height: 250px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .text h1 {
+      font-size: 35px;
+  }
+
+  .text p {
+      font-size: 0.9rem;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+
+  .buttons button {
+      padding: 10px 15px;
+      font-size: 0.8rem;
+  }
+
+  .about-me-image {
+      width: 200px;
+      height: 200px;
+  }
+
+  .nav-bar {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-links li {
+      margin-left: 0;
+  }
+
+  .lab2 img {
+      width: 100%;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
